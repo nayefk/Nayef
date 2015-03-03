@@ -1,0 +1,35 @@
+mport java.util.Scanner; 
+public class VIM1 {
+	public static void main(String[] args) {
+		String username = "nayef";
+        String password = "1234";
+        String inputPass;
+        String intputUser;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter your username:");
+        intputUser = input.nextLine();
+        System.out.println("Enter Your Password:");
+        inputPass = input.nextLine();
+        
+        if (intputUser.equals(username))
+        if (inputPass.equals(password))
+	{
+            System.out.println("Welcome User!");
+        } else {
+            for (int i = 0 ; i < 2 ; i++) {
+            	System.out.println("Enter your username:");
+            	intputUser = input.nextLine();
+                System.out.println("Enter Your Password:");
+                inputPass = input.nextLine();
+
+                if (intputUser.equals(username))
+                if (inputPass.equals(password))
+               
+                {
+                    System.out.println("Welcome User!");
+                }
+              }
+         System.out.println("Please contact your adminstrator to unlock your account!");
+   
+ 
+        }}}
