@@ -1,0 +1,30 @@
+mport javax.swing.JOptionPane;
+
+public class IfElseIf {
+	public static void main(String[] args) {
+		String strNumPeople = "";
+		double dblNumPeople, dblGroupSize;
+		
+		strNumPeople = JOptionPane.showInputDialog("Enter the number of people: ");
+		dblNumPeople = Double.parseDouble(strNumPeople);
+		
+	    if (dblNumPeople >= 10){
+	    	dblGroupSize = (dblNumPeople / 2);
+	    	JOptionPane.showMessageDialog(null,"The group size =" + dblGroupSize);
+	    } else if (dblNumPeople < 10 && dblNumPeople > 3){
+	    	dblGroupSize = (dblNumPeople / 3);
+	    	JOptionPane.showMessageDialog(null,"The group size = " + dblGroupSize);
+	    } else {
+	    	JOptionPane.showMessageDialog(null,"The number of people has to be at least 3.");
+	    }
+	   String strNumPlayers = "";
+	   double dblNumPlayers, dblTeamSize;
+	    strNumPlayers = JOptionPane.showInputDialog(null,"Enter the number of plyars: ");
+	    dblNumPlayers = Double.parseDouble(strNumPlayers);
+	    if (dblNumPlayers >= 11 && dblNumPlayers <= 55){
+	    	dblTeamSize = (dblNumPlayers / 11);
+	    	JOptionPane.showMessageDialog(null,"The team size = " + dblTeamSize);
+	} else {
+		JOptionPane.showMessageDialog(null,"The team size = 1.");
+	
+	}}}
