@@ -4,9 +4,9 @@ mail.google.com:HSTS	9	16498	1436396355194,1,1
 egghead.io:HSTS	0	16497	1456914196219,1,0
 apply.jhu.edu:HSTS	0	16492	1456484195198,1,1
 render.githubusercontent.com:HSTS	0	16493	1456559982040,1,0
-try.github.io:HSTS	5	16499	1457074968439,1,0
+try.github.io:HSTS	5	16499	1457075279602,1,0
 support.mozilla.org:HSTS	0	16497	1456905903666,1,0
-services.addons.mozilla.org:HSTS	19	16498	1456988578155,1,0
+services.addons.mozilla.org:HSTS	20	16499	1457075100376,1,0
 d2y48w7m6jzhpb.cloudfront.net:HSTS	0	16496	1440858301105,1,0
 www.getdrip.com:HSTS	0	16497	1456914200011,1,0
 www.facebook.com:HSTS	27	16499	1441079016047,1,0
@@ -41,7 +41,7 @@ secure.skype.com:HSTS	1	16495	1456705167721,1,1
 twitter.com:HSTS	11	16498	2055863645822,1,0
 plus.google.com:HSTS	0	16491	1435726256188,1,0
 raw.githubusercontent.com:HSTS	0	16492	1456473110380,1,0
-d13jv82ekraqyq.cloudfront.net:HSTS	5	16499	1457074968841,1,0
+d13jv82ekraqyq.cloudfront.net:HSTS	5	16499	1457075032985,1,0
 www.customwritings.com:HSTS	1	16496	1456840651599,1,0
 syndication.twitter.com:HSTS	15	16498	2056649030344,1,0
 app.getsentry.com:HSTS	1	16497	1456897293747,1,0
