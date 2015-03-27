@@ -1,0 +1,29 @@
+mport javax.swing.JOptionPane;
+public class User {
+	
+public enum user { Administrator, Faculty, Staff, Student, Guest }
+ 
+public static void main(String[] args) {
+         user [] choices = { user.Administrator, user.Faculty, user.Staff, user.Student, user.Guest};
+       
+     
+          user select = (user)JOptionPane.showInputDialog(null, "Please select on of the choises to log in", "This user is a: ", JOptionPane.INFORMATION_MESSAGE, null, choices, choices[4]);
+          
+     switch(select) {
+  case Administrator:
+	  JOptionPane.showMessageDialog(null, "Welcome Administrator");
+	  break;
+  case Faculty:
+	  JOptionPane.showMessageDialog(null, "Welcome Faculty");
+	  break;
+  case Staff:
+	  JOptionPane.showMessageDialog(null, "Welcome Staff");
+	  break;
+  case Student:
+	  JOptionPane.showMessageDialog(null, "Welcome Student");
+	  break;
+  case Guest:
+	  JOptionPane.showMessageDialog(null, "Welcome Guest");
+	  break;
+     }
+         }}
