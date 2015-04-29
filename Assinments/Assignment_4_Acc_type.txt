@@ -1,0 +1,137 @@
+import javax.swing.JOptionPane;
+
+
+public class Assignment_4_Acc_type 
+{
+	public static void main(String[] args) 
+	{
+		/*  create array for admin,student and staff  */
+		String[] choices = { "Admin", "Student", "Staff"};
+		int loop=0;
+		do
+		{
+			/*  choose account type for admin etc. */
+			String input = (String) JOptionPane.showInputDialog(null, "Choose account type...","Account Type",JOptionPane.QUESTION_MESSAGE, null,choices,choices[0]); 
+			if(input!=null)
+			{
+				/* check which type is selected admin , student or staff  */
+				int c = 0;
+				if(input.equals("Admin"))
+				{
+					c=1;
+				}
+				else if(input.equals("Student"))
+				{
+					c=2;
+				}
+				else if(input.equals("Staff"))
+				{
+					c=3;
+				}
+				/* check which type is selected  */
+				switch(c)
+				{
+					case 1:
+						/*  if user select admin then call authentication method for check username and password  */
+						/*  admin username is Admin and password is Admin and pass the message to display */
+						int flag1=authentication("Admin", "Admin", "Welcome Admin! You can update and read file.");
+						if(flag1!=0)
+						{
+							loop=1;
+						}
+						break;
+					case 2:
+						/*  if user select Student then call authentication method for check username and password  */
+						/*  Student username is Student and password is Student and pass the message to display */
+						int flag2=authentication("Student", "Student", "Welcome Student! You can only read file.");
+						if(flag2!=0)
+						{
+							loop=1;
+						}
+						break;
+					case 3:
+						/*  if user select Staff  then call authentication method for check username and password  */
+						/*  Staff username is Staff and password is Staff and pass the message to display */
+						int flag3=authentication("Staff", "Staff", "Welcome Staff! You can update, read, add, delete file.");
+						if(flag3!=0)
+						{
+							loop=1;
+						}
+						break;
+					default:
+						break;
+						
+				}
+			}
+			else
+			{
+				break;
+			}
+			/* if user select invalid type then continue to select right type */
+		}while(loop!=1);
+	}
+	/* method for check username and password for admin , student and staff  */
+	public static int authentication(String username1,String password1,String msg1)
+	{
+		int count=0,count1=0,flag=0;
+		for(int i=0;i<3;i++)
+		{
+			/* enter username */
+			String username=JOptionPane.showInputDialog("Enter UserName : ");
+			if(username!=null)
+			{
+				if(username.equals(username1))
+				{
+					/* if username is match then enter password */
+					for(int j=0;j<3;j++)
+					{
+						/* enter password  */
+						String password=JOptionPane.showInputDialog("Enter Password : ");
+						if(password!=null)
+						{
+							if(password.equals(password1))
+							{
+								/* if password is match then display message */
+								JOptionPane.showMessageDialog(null, msg1);
+								flag=1;
+								break;									
+							}
+							else
+							{
+								/* if password is wrong then display message  */
+								count1++;
+								JOptionPane.showMessageDialog(null, "Invalid Password Please Try Again");
+							}
+						}
+						else
+						{
+							break;
+						}
+					}
+					if(count1>2)
+					{
+						/*  if password is enter 3 time wrong then display message */
+						JOptionPane.showMessageDialog(null, "Contact Administrator");
+					}
+					break;
+				}
+				else
+				{
+					/* invalid username then display message  */
+					count++;
+					JOptionPane.showMessageDialog(null, "Invalid  Username Please Try Again");
+				}
+			}
+			else
+			{
+				break;
+			}
+		}
+		if(count>2)
+		{
+			/* if username is enter 3 time wrong then display message */
+			JOptionPane.showMessageDialog(null, "Contact Administrator");
+		}
+		return flag;
+	}
+}

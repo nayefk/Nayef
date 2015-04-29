@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+
+public class Assignment_2_Sum_Avg 
+{
+	public static void main(String[] args) 
+	{
+		/* create 5 element array  */
+		int n[]=new int[5];
+		int sum=0;
+		/* scanner class object created  */
+		Scanner sc=new Scanner(System.in);
+		for(int i=0;i<n.length;i++)
+		{
+			/* enter five value  */
+			System.out.println("Enter Number : ");
+			n[i]=sc.nextInt();
+			/* calculate sum */
+			sum=sum+n[i];
+		}
+		/* calculate average  */
+		double avg=sum/n.length;
+		/*  display sum and average   */
+		System.out.println("The sum is : "+sum);
+		System.out.println("The Average is : "+avg);
+		
+		
+		/* Minimum value  */
+		int min=0;
+		min=n[0];
+		for(int i=0;i<n.length;i++)
+		{
+			
+			if(min>n[i])
+			{
+				min=n[i];
+			}
+		}
+		/*  display minimum value   */
+		System.out.println("Minimum value : "+min);
+		/* Maximum value  */
+		int max=0;
+		max=n[0];
+		for(int i=0;i<n.length;i++)
+		{
+			
+			if(max<n[i])
+			{
+				max=n[i];
+			}
+		}
+		/*  display maximum value  */
+		System.out.println("Maximum value : "+max);
+	}
+}

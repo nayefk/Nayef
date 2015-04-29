@@ -1,0 +1,186 @@
+
+
+
+public class Driver 
+{
+	public static void main(String[] args) 
+	{
+		Day d=new Day("TUE");
+		d.printDay();
+		System.out.println("The Next Day is : "+d.nextDay());
+		System.out.println("The Previous Day is : "+d.previousDay());
+		/* enter day you want to calculate  */
+		System.out.println("Next 5 Days : "+d.dayCalculate(5));
+	}
+}
+class Day
+{
+	String todays;
+	enum days
+	{
+		SUN(0),MON(1),TUE(2),WED(3),THU(4),FRI(5),SAT(6);
+		int no;
+		days(int no)
+		{
+			this.no=no;
+		}
+		int getNo()
+		{
+			return no;
+		}
+	}
+	public Day(String todays) 
+	{
+		setDays(todays);
+	}
+	public String getDays() {
+		return todays;
+	}
+
+	public void setDays(String todays) {
+		this.todays= todays;
+	}
+	public void printDay()
+	{
+		System.out.println("Today is : "+todays);
+	}
+	public String nextDay()
+	{
+		String nextday="";
+		for(days dy:days.values())
+		{
+			if(dy.name().equals(todays))
+			{
+				if(dy.getNo()==0)
+				{
+					nextday="Monday";
+					return nextday;
+				}
+				else if(dy.getNo()==1)
+				{
+					nextday="Tuesday";
+					return nextday;
+				}
+				else if(dy.getNo()==2)
+				{
+					nextday="Wednesday";
+					return nextday;
+				}
+				else if(dy.getNo()==3)
+				{
+					nextday="Thursday";
+					return nextday;
+				}
+				else if(dy.getNo()==4)
+				{
+					nextday="Friday";
+					return nextday;
+				}
+				else if(dy.getNo()==5)
+				{
+					nextday="Saturday";
+					return nextday;
+				}
+				else if(dy.getNo()==6)
+				{
+					nextday="Sunday";
+					return nextday;
+				}
+			}
+		}
+		return nextday;
+	}
+	public String previousDay()
+	{
+		String previousday="";
+		for(days dy:days.values())
+		{
+			if(dy.name().equals(todays))
+			{
+				if(dy.getNo()==0)
+				{
+					previousday="Saturday";
+					return previousday;
+				}
+				else if(dy.getNo()==1)
+				{
+					previousday="Sunday";
+					return previousday;
+				}
+				else if(dy.getNo()==2)
+				{
+					previousday="Monday";
+					return previousday;
+				}
+				else if(dy.getNo()==3)
+				{
+					previousday="Tuesday";
+					return previousday;
+				}
+				else if(dy.getNo()==4)
+				{
+					previousday="Wednesday";
+					return previousday;
+				}
+				else if(dy.getNo()==5)
+				{
+					previousday="Thursday";
+					return previousday;
+				}
+				else if(dy.getNo()==6)
+				{
+					previousday="Friday";
+					return previousday;
+				}
+			}
+		}
+		return previousday;
+	}
+	public String dayCalculate(int no)
+	{
+		String cal="";
+		days d=days.valueOf(todays);
+		int with=d.getNo();
+		
+		for(int i=1;i<=no;i++)
+		{
+			if(with==6)
+			{
+				with=0;
+			}
+			else
+			{
+				with++;
+			}
+		}
+		if(with==0)
+		{
+			cal="Sunday";
+		}
+		else if(with==1)
+		{
+			cal="Monday";
+		}
+		else if(with==2)
+		{
+			cal="Tuesday";
+		}
+		else if(with==3)
+		{
+			cal="Wednesday";
+		}
+		else if(with==4)
+		{
+			cal="Thursday";
+		}
+		else if(with==5)
+		{
+			cal="Friday";
+		}
+		else if(with==6)
+		{
+			cal="Saturday";
+		}
+		return cal;
+	}
+}

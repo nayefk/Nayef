@@ -1,0 +1,31 @@
+
+public class Assignment_1_Expression 
+{
+	public static void main(String[] args) 
+	{
+		/* First Expression */
+		int exp1=1/2;
+		System.out.println("Expression 1 / 2 answer is : "+exp1);
+		/* Second Expression */
+		int exp2=1 % 2;
+		System.out.println("Expression 1 % 2 answer is : "+exp2);
+		/* Third Expression */
+		double exp3=1.0 / 2;
+		System.out.println("Expression 1.0 / 2 answer is : "+exp3);
+		/* Fourth Expression */
+		int exp4=5 + 7 / 2;
+		System.out.println("Expression 5 + 7 / 2 answer is : "+exp4);
+		/* Fifth Expression */
+		String exp5="Beat" + ' ' + "Army";
+		System.out.println("Expression \"Beat + \' \' + \"Army\" answer is : "+exp5);
+		/* Sixth Expression */
+		float exp6=6 + 13 / 5 - 35 % 3;
+		System.out.println("Expression 6 + 13 / 5 - 35 % 3 answer is : "+exp6);
+		/* Seventh Expression */
+		double exp7=3.5 * (5/4);
+		System.out.println("Expression 3.5 * (5/4) answer is : "+exp7);
+		/* Eighth Expression */
+		double exp8=(3.5 * 5)/4;
+		System.out.println("Expression (3.5 * 5)/4 answer is : "+exp8);
+	}
+}
