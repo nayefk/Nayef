@@ -1,0 +1,20 @@
+
+public class String_Class 
+{
+	public static void main(String[] args) 
+	{
+		String msg="Assignment";
+		System.out.println("Char At Method : "+msg.charAt(1));
+		String concat=msg.concat(" Work");
+		System.out.println("Concate String : "+concat);
+		System.out.println("Equals Method : "+msg.equals("Assignment"));
+		System.out.println("Equals IgnoreCase : "+msg.equalsIgnoreCase("assignment"));
+		System.out.println("IndexOf : "+msg.indexOf('A'));
+		System.out.println("Last Index Of : "+msg.lastIndexOf('t'));
+		System.out.println("Touppercase : "+msg.toUpperCase());
+		System.out.println("ToLower case : "+msg.toLowerCase());
+		System.out.println("Replace : "+msg.replace('A', 'a'));
+		System.out.println("Sub String : "+msg.substring(6,9));
+		System.out.println("Trim : "+msg.trim());
+	}
+}

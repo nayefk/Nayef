@@ -1,0 +1,50 @@
+
+public class WithOut_Math 
+{
+	public static void main(String[] args) 
+	{
+		h(2);
+		f(10, 20);
+		g(25, -2, 5);
+	}	
+	public static double power(double m,double n)
+	{
+		double power=1;
+		for(int i=1;i<=n;i++)
+		{
+			power=power*m;
+		}
+		return power;
+	}
+	public static double squaroot(double d)
+	{
+		double g1;
+		double squareRoot = d/2;
+		do
+	    {
+	        g1=squareRoot;
+	        squareRoot = (g1 + (d/g1))/2;
+	    }while((g1-squareRoot)!=0);
+		return squareRoot;
+	}
+	public static double abs(double a) 
+	{
+         double abs= (a <= 0.0) ? 0.0 - a : a;
+         return abs;
+    }
+	public static void h(double x)
+	{
+		System.out.println(power(x, 10));
+	}
+	public static void f(double x,double y)
+	{
+		double ans=x+y;
+		System.out.println("Answer is : "+ans);
+	}
+	public static void g(double x,double y,double z)
+	{
+		double ans=squaroot(x) + abs(y) + power(z, y);
+		System.out.println("Answer is : "+ans);
+	}
+	
+}

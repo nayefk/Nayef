@@ -1,0 +1,58 @@
+
+public class calculator
+{
+	public static void main(String[] args) 
+	{
+		int i[]={10,20,30,40,50};
+		System.out.println("Sum is : "+Calculator.sum(i));
+		float f[]={10.2f,123.2f,253.2f};
+		System.out.println("Average is : "+Calculator.avg(f));
+		int j[]={1,2,3,4,5};
+		System.out.println("Product is : "+Calculator.product(j));
+		System.out.println("Facorial is : "+Calculator.factorial(5));
+	}
+}
+class Calculator
+{
+	public static int sum(int []a)
+	{
+		int sum=0;
+		
+		for(int i=0;i<a.length;i++)
+		{
+			sum+=a[i];
+		}
+		return sum;
+	}
+	public static float avg(float []f)
+	{
+		float avg=0;
+		float sum=0;
+		for(int i=0;i<f.length;i++)
+		{
+			sum+=f[i];
+		}
+		avg=sum/f.length;
+		return avg;
+	}
+	public static int product(int []a)
+	{
+		int product=1;
+		
+		for(int i=0;i<a.length;i++)
+		{
+			product*=a[i];
+		}
+		return product;
+	}
+	public static int factorial(int a)
+	{
+		int fact=1;
+		
+		for(int i=1;i<=a;i++)
+		{
+			fact*=i;
+		}
+		return fact;
+	}
+}

@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+
+public class Echo_Program 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Byte : ");
+		byte by=sc.nextByte();
+		System.out.println("Enter Short : ");
+		short sh=sc.nextShort();
+		System.out.println("Enter Int : ");
+		int i=sc.nextInt();
+		System.out.println("Enter Long : ");
+		long l=sc.nextLong();
+		System.out.println("Enter Float : ");
+		float f=sc.nextFloat();
+		System.out.println("Enter Double : ");
+		double d=sc.nextDouble();
+		System.out.println("Enter Boolean : ");
+		boolean b=sc.nextBoolean();
+		System.out.println("Enter Character : ");
+		String c=sc.next();
+		JOptionPane.showMessageDialog(null, "Byte is: "+by+"\nShort is :"+sh+"\nInt is:"+i+"\nLong is :"+l+"\nFloat is :"+f
+		+"\nDouble is :"+d+"\nBoolean is :"+b+"\nCharacter is :"+c);
+	}
+}

@@ -1,0 +1,67 @@
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+
+public class GUI_Total 
+{
+	public static void main(String[] args) 
+	{
+		new Total();
+	}
+}
+class Total extends JFrame implements ActionListener
+{
+	JButton tot;
+	JTextField firsttext,secondtext;
+	JLabel answer;
+	public Total() 
+	{	
+		setLayout(new FlowLayout());
+		setSize(500,500);
+		setTitle("Total");
+		setVisible(true);
+		JPanel jp=new JPanel();
+		
+		JLabel first=new JLabel("First Number");
+		jp.add(first);
+
+		
+		firsttext=new JTextField(10);
+		jp.add(firsttext);
+		
+		JLabel seo=new JLabel("Second Number");
+		jp.add(seo);
+		
+		secondtext=new JTextField(10);
+		jp.add(secondtext);
+		
+		tot=new JButton("Total");
+		jp.add(tot);
+		tot.addActionListener(this);
+		
+		answer=new JLabel("                      ");
+		jp.add(answer);
+		
+		add(jp);
+		pack();
+	}
+	public void actionPerformed(ActionEvent a) 
+	{
+		if(a.getSource()==tot)
+		{
+			String fir=firsttext.getText();
+			String sec=secondtext.getText();
+			int one=Integer.parseInt(fir);
+			int two=Integer.parseInt(sec);
+			int sum=one+two;
+			answer.setText("The Answer is : "+sum);
+		}
+	}
+}

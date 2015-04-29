@@ -1,0 +1,97 @@
+import javax.swing.JOptionPane;
+
+
+public class CarDriver_7 
+{
+	public static void main(String[] args) 
+	{
+		Car_7 c1=new Car_7();
+		c1.setColor(JOptionPane.showInputDialog("Enter Car Color : "));
+		c1.setHorsepower(Integer.parseInt(JOptionPane.showInputDialog("Enter Car Horse Power: ")));
+		c1.setEngine_size(Integer.parseInt(JOptionPane.showInputDialog("Enter Car Engine Size : ")));
+		JOptionPane.showMessageDialog(null, c1.toString());
+		
+		String color=JOptionPane.showInputDialog("Enter Second Car Color : ");
+		int h=Integer.parseInt(JOptionPane.showInputDialog("Enter Second Car Horse Power: "));
+		int size=Integer.parseInt(JOptionPane.showInputDialog("Enter Second Car Engine Size : "));
+		
+		Car_7 c2=new Car_7(color,h,size);
+		
+		String second="Second Car Color is : "+c2.getColor()+"\nSecond Car Engine Size is : "+c2.getEngine_size()+"\nSecond Car Horse Power is : "+c2.getHorsepower();
+		JOptionPane.showMessageDialog(null, second);
+		
+		String color1=JOptionPane.showInputDialog("Enter Third Car Color : ");
+		int h1=Integer.parseInt(JOptionPane.showInputDialog("Enter Third Car Horse Power: "));
+		int size1=Integer.parseInt(JOptionPane.showInputDialog("Enter Third Car Engine Size : "));
+		
+		
+		Car_7 c3=new Car_7(color1,h1,size1);
+		if(c3.equals(c2))
+		{
+			JOptionPane.showMessageDialog(null, "Second Car And Third Car are same");
+		}
+		else
+		{
+			JOptionPane.showMessageDialog(null, "Second Car And Third Car are Not same");
+		}
+		JOptionPane.showMessageDialog(null, "Total Car Class Object Created : "+Car_7.getCount());
+	}
+}
+class Car_7
+{
+	String color;
+	int horsepower,engine_size;
+	static int count=0;
+	public String getColor() {
+		return color;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+	public int getHorsepower() {
+		return horsepower;
+	}
+	public void setHorsepower(int horsepower) {
+		this.horsepower = horsepower;
+	}
+	public int getEngine_size() {
+		return engine_size;
+	}
+	public void setEngine_size(int engine_size) {
+		this.engine_size = engine_size;
+	}
+	public Car_7() 
+	{
+		count++;
+	}
+	public Car_7(String color,int horsepower,int engine_size)
+	{
+		setColor(color);
+		setEngine_size(engine_size);
+		setHorsepower(horsepower);
+		count++;
+	}
+	
+	public boolean equals(Object obj) 
+	{
+		if((obj instanceof Car_7) && ((((Car_7)obj)).getColor().equals(this.getColor())) && ((((Car_7)obj)).getHorsepower()==(this.getHorsepower())) && ((((Car_7)obj)).getEngine_size()==(this.getEngine_size())))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	public static int getCount()
+	{
+		return count;
+	}
+	public String toString() 
+	{
+		String car="Car Color is : "+color;
+		car+="\nCar Horse Power is : "+horsepower;
+		car+="\nCar Engine Size is : "+engine_size;
+		return car;
+	}
+}

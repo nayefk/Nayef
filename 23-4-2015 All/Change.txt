@@ -1,0 +1,30 @@
+import javax.swing.JOptionPane;
+
+public class Change
+
+{
+
+   public static void main(String[] args)
+   {      
+	  final int  QUART=25;
+	  final int  DIME=10;
+	  final int  NICK=5;
+	  final int  PENNI=5;
+	  
+      int price =Integer.parseInt(JOptionPane.showInputDialog("Enter Price : "));
+      int payment =Integer.parseInt(JOptionPane.showInputDialog("Enter Payment : "));
+      int change = payment - price; // Calculation phase
+      
+      int quarters = change / QUART;
+      int remaining = change % QUART;
+      int dimes = remaining / DIME;
+      remaining = remaining % DIME;
+      int nickels = remaining / NICK;
+      int pennies = remaining % PENNI;
+
+      // Output phase
+
+      JOptionPane.showMessageDialog(null, "Number of quarters = " + quarters+"\n"+"Number of dimes = " + dimes+"\nNumber of nickels = " + nickels+"\nNumber of pennies = " + pennies);
+   }
+
+}
